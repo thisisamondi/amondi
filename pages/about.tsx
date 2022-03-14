@@ -6,7 +6,7 @@ import Info from '../components/Info'
 export const getStaticProps = async () => {
   const query = groq`*[_type == 'about']{
   "imageUrl": image.asset->url,
-  description,
+  "description": description[0].children[0].text,
 }`
 
   const about = await sanityClient.fetch(query)
@@ -24,7 +24,7 @@ const About: NextPage = ({ about }: any) => {
       <Info
         title={about.title}
         image={about[0].imageUrl}
-        description={about.description}
+        description={about[0].description}
       />
     </div>
   )
