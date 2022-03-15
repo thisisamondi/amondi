@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import FiInstagram from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
 
 const ContactComponent = ({
   title,
@@ -13,7 +13,16 @@ const ContactComponent = ({
     <div className="flex min-h-screen flex-col items-center bg-black text-white">
       <h1>{title}</h1>
       <p>{description}</p>
-      <p>{email}</p>
+      <div>
+        <FaInstagram />
+        <p>
+          {email}
+          <span>
+            {' '}
+            <FiMail />
+          </span>
+        </p>
+      </div>
     </div>
   )
 }

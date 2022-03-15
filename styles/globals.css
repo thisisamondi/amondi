@@ -6,4 +6,10 @@
   html {
     font-family: Helvetica, system-ui, sans-serif;
   }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-weight: 300;
+  }
 }
