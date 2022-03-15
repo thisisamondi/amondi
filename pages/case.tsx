@@ -24,14 +24,16 @@ export const getStaticProps = async () => {
 const Case: NextPage = ({ work }: any) => {
   const workCase = work[0]
   const artists = workCase?.artist
+  const category = workCase?.category
+  const country = workCase?.country
 
   return (
     <div>
       <CaseComponent
         title={work[0].title}
         description={work[0].description}
-        category={work[0]?.category[0]?.title}
-        country={work?.country?.country}
+        category={category}
+        country={country}
         artist={artists}
       />
     </div>

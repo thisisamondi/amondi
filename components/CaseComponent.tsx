@@ -1,8 +1,12 @@
 import Image from 'next/image'
 
-const CaseComponent = ({ title, description, artist }: any) => {
-  console.log(artist)
-
+const CaseComponent = ({
+  title,
+  description,
+  artist,
+  country,
+  category,
+}: any) => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* TITLE */}
@@ -15,7 +19,7 @@ const CaseComponent = ({ title, description, artist }: any) => {
         <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {artist.map((artist: any, index: any) => (
             <div key={index}>
-              <div className="relative h-[23rem] w-[23rem]">
+              <div className="relative sm:h-[15rem] sm:w-[15rem] md:h-[15rem] md:w-[15rem] lg:h-[23rem] lg:w-[23rem]">
                 <Image
                   src={artist.image}
                   layout="fill"
@@ -24,6 +28,14 @@ const CaseComponent = ({ title, description, artist }: any) => {
                 />
               </div>
               <p className="mt-1">{artist.name}</p>
+              {/* CATEGORY */}
+              <p>{category[0].title}</p>
+              {/* COUNTRY */}
+              {artist.name == 'Arash' ? (
+                <p>{country[1].country}</p>
+              ) : (
+                <p>{country[0].country}</p>
+              )}
             </div>
           ))}
         </div>
