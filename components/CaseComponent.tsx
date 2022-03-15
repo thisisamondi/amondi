@@ -19,7 +19,7 @@ const CaseComponent = ({
         <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {artist.map((artist: any, index: any) => (
             <div key={index}>
-              <div className="relative sm:h-[15rem] sm:w-[15rem] md:h-[15rem] md:w-[15rem] lg:h-[23rem] lg:w-[23rem]">
+              <div className="relative mb-5 sm:h-[15rem] sm:w-[15rem] md:h-[15rem] md:w-[15rem] lg:h-[23rem] lg:w-[23rem]">
                 <Image
                   src={artist.image}
                   layout="fill"
