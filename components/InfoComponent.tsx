@@ -1,19 +1,23 @@
 import Image from 'next/image'
+import Container from './Container'
 
-const InfoComponent = ({ title, description, image }: any) => {
-  console.log('description', description)
-
+const InfoComponent = ({ description, image }: any) => {
   return (
-    <div className="bg-black">
-      <div className="ml-72 mr-64 flex min-h-screen flex-wrap justify-center text-white sm:relative md:py-10">
-        <div className="relative h-[36rem] w-[70rem]">
-          <Image src={image} layout="fill" objectFit="cover" />
+    <Container>
+      <div className="flex min-h-screen flex-col bg-black text-white">
+        <div className="relative">
+          <Image
+            src={image.url}
+            width={image.dimensions.width}
+            height={image.dimensions.height}
+          />
         </div>
-        <div className="grid-cols-2 lg:grid">
-          <p className="sm:mt-4 md:-mt-32 lg:-mt-32">{description}</p>
+
+        <div className="max-w-[500px]">
+          <p>{description}</p>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

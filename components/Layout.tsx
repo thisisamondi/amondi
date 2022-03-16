@@ -7,10 +7,10 @@ interface children {
 
 export default function Layout({ children }: children) {
   return (
-    <>
+    <div className="bg-black">
       <NavBar />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
