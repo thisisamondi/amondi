@@ -7,7 +7,8 @@ export const getStaticProps = async () => {
   const query = groq`*[_type == 'contact']{
   title,
   name,
-  "description": description[0].children[0].text,
+  description,
+  subDescription,
   instagram,
   email,
   phone,
@@ -25,6 +26,7 @@ export const getStaticProps = async () => {
 const Contact: NextPage = ({ contact }: any) => {
   console.log(contact[0].email)
   const info = contact[0]
+  console.log(contact)
 
   return (
     <div>
@@ -32,6 +34,7 @@ const Contact: NextPage = ({ contact }: any) => {
         title={info.title}
         name={info.name}
         description={info.description}
+        subDescription={info.subDescription}
         instagram={info.instagram}
         email={info.email}
         phone={info.phone}

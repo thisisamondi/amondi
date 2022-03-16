@@ -16,7 +16,12 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'blockContent',
+      type: 'string',
+    },
+    {
+      name: 'subDescription',
+      title: 'Sub Description',
+      type: 'string',
     },
     {
       name: 'instagram',
