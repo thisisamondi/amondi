@@ -6,6 +6,7 @@ import InfoComponent from '../components/InfoComponent'
 export const getStaticProps = async () => {
   const query = groq`*[_type == 'about']{
     image {
+  
       "url": asset->url,
       "dimensions": asset->metadata.dimensions
     },
