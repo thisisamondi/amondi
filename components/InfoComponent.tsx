@@ -12,7 +12,6 @@ const InfoComponent = ({ description, image }: any) => {
             width={image.asset.metadata.dimensions.width}
             height={image.asset.metadata.dimensions.height}
           />
-
           <div className="max-w-[500px]">
             <p>{description}</p>
           </div>
