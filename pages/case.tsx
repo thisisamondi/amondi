@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { sanityClient } from '../client'
+import { sanityClient } from '../utils/client'
 import groq from 'groq'
 import CaseComponent from '../components/CaseComponent'
 

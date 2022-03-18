@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import ContactComponent from '../components/ContactComponent'
-import { sanityClient } from '../client'
+import { sanityClient } from '../utils/client'
 import groq from 'groq'
 
 export const getStaticProps = async () => {

@@ -1,14 +1,17 @@
 import type { NextPage } from 'next'
-import { sanityClient } from '../client'
+import { sanityClient } from '../utils/client'
 import groq from 'groq'
 import InfoComponent from '../components/InfoComponent'
 
 export const getStaticProps = async () => {
   const query = groq`*[_type == 'about']{
     image {
-  
-      "url": asset->url,
-      "dimensions": asset->metadata.dimensions
+      ...,
+      asset-> {
+        _id,
+        url,
+        metadata
+      },
     },
 
   "description": description[0].children[0].text,
@@ -24,11 +27,11 @@ export const getStaticProps = async () => {
 }
 
 const About: NextPage = ({ about }: any) => {
-  console.log(about)
+  console.log(about[0].image)
+
   return (
     <div>
       <InfoComponent
-        title={about.title}
         image={about[0].image}
         description={about[0].description}
       />
