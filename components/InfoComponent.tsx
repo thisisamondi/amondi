@@ -8,11 +8,7 @@ const InfoComponent = ({ description, image }: any) => {
     <Container>
       <div className="flex justify-center">
         <div className="flex min-h-screen w-4/5 flex-col bg-black text-white">
-          <NextImage
-            image={image}
-            width={image.asset.metadata.dimensions.width}
-            height={image.asset.metadata.dimensions.height}
-          />
+          <NextImage image={image} />
           <div className="max-w-[500px]">
             <p>{description}</p>
           </div>
