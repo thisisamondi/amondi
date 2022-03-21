@@ -9,7 +9,8 @@
   h1 {
     font-size: 3rem;
   }
-  p {
+  p, span {
     font-weight: 300;
   }
+ 
 }

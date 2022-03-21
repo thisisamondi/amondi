@@ -1,12 +1,6 @@
 import Image from 'next/image'
 
-const CaseComponent = ({
-  title,
-  description,
-  artist,
-  country,
-  category,
-}: any) => {
+const CaseComponent = ({ title, description, artist, category }: any) => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* TITLE */}
@@ -31,13 +25,11 @@ const CaseComponent = ({
               {/* CATEGORY */}
               <p>{category[0].title}</p>
               {/* COUNTRY */}
-              {artist.name == 'Arash' ? (
-                <p>{country[1].country}</p>
-              ) : (
-                <p>{country[0].country}</p>
-              )}
+              {artist.country.map((country: any, index: any) => (
+                <span key={index}>{(index ? ', ' : '') + country.country}</span>
+              ))}
             </div>
-          ))}
+          ))}{' '}
         </div>
       </div>
     </div>

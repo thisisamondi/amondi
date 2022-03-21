@@ -20,12 +20,6 @@ export default {
       of: [{ type: 'reference', to: [{ type: 'artist' }] }],
     },
     {
-      name: 'country',
-      title: 'Country',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'country' }] }],
-    },
-    {
       name: 'category',
       title: 'Category',
       type: 'array',

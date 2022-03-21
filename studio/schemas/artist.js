@@ -14,6 +14,13 @@ export default {
       title: 'Image',
       type: 'figure',
     },
+    {
+      name: 'country',
+      title: 'Country',
+      description: 'Where have you worked with this artist/group?',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'country' }] }],
+    },
   ],
   preview: {
     select: {
