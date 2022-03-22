@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { sanityClient } from '../utils/client'
 import groq from 'groq'
-import InfoComponent from '../components/InfoComponent'
+import InfoComponent from '../components/AboutComponent'
 
 export const getStaticProps = async () => {
   const query = groq`*[_type == 'about']{

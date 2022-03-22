@@ -1,17 +1,18 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Dropwdown from './DropDownComponent'
 
 function NavBar() {
   const router = useRouter()
 
   return (
-    <header className="flex items-center justify-between bg-black py-6 px-6 text-white sm:relative md:py-10">
+    <header className="flex items-center justify-between bg-black py-6 text-white">
       <h1 className="ml-10 cursor-pointer text-lg font-normal">
         <Link href="/">Rebecka Isberg</Link>
       </h1>
-
-      <nav className="ml-4 pr-60 font-light">
-        <ul className="flex gap-4">
+      {/* Primary Menu */}
+      <nav className="mr-10">
+        <ul className="hidden gap-4 font-light lg:flex">
           <li
             className={
               router.pathname == '/about'
@@ -39,6 +40,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
+      <Dropwdown />
     </header>
   )
 }
