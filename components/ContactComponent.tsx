@@ -15,13 +15,13 @@ const ContactComponent = ({
 }: any) => {
   return (
     <Container>
-      <div className="ml-10 min-h-screen max-w-xs bg-black text-white md:pl-52 lg:pl-96">
+      <div className="ml-10 min-h-screen bg-black text-white md:pl-52">
         <h1 className="lg:6xl mt-10">{title}</h1>
-        <section className="mt-10 lg:mt-16">
-          <p className="lg:text-3xl">{description}</p>
-          <p className="mt-4 lg:text-3xl">{subDescription}</p>
+        <section className=" mt-10 lg:mt-16">
+          <p className=" text-3xl">{description}</p>
+          <p className="mt-4 text-3xl">{subDescription}</p>
           <a className="cursor-pointer" href="tel:+46" {...phone}>
-            <p className="inline lg:text-2xl">+46(0){phone}</p>
+            <p className="inline text-2xl">+46(0){phone}</p>
           </a>
         </section>
         {/* ICONS */}
