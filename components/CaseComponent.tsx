@@ -6,7 +6,7 @@ const CaseComponent = ({ title, description, artist, category }: any) => {
     <Container>
       <div className="min-h-screen bg-black text-white">
         {/* TITLE */}
-        <h1 className="text-center text-7xl">{title}</h1>
+        <h1 className="text-center text-6xl">{title}</h1>
         {/* DESCRIPTION */}
         <p className="mb-10 text-center">{description}</p>
         {/* GRID CONTAINER */}

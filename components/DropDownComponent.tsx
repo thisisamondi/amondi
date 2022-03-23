@@ -32,11 +32,10 @@ export default function Dropwdown() {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items
-              className="text-l absolute right-0 mt-2
-               mr-5 min-h-screen w-32 origin-top-right bg-black focus:outline-none
+              className="text-l absolute right-0 mt-2 min-h-screen w-32 origin-top-right bg-black focus:outline-none
         "
             >
-              <div className="inline-flex flex-col gap-1 py-1 font-normal ">
+              <div className="mr-5 inline-flex flex-col gap-1 py-1 font-normal">
                 <Menu.Item>
                   <p>
                     <Link href="/about"> About</Link>

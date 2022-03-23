@@ -16,7 +16,7 @@ const ContactComponent = ({
   return (
     <Container>
       <div className="min-h-screen bg-black text-white sm:pl-36 md:pl-52 lg:pl-96">
-        <h1>{title}</h1>
+        <h1 className="6xl mt-10">{title}</h1>
         <section className="mt-16">
           <p className="text-3xl">{description}</p>
           <p className="mt-4 text-3xl">{subDescription}</p>
@@ -25,7 +25,7 @@ const ContactComponent = ({
           </a>
         </section>
         {/* ICONS */}
-        <section className="mt-16">
+        <section className="mt-16 ">
           <a href={instagram}>
             <FaInstagram className="mb-5 inline cursor-pointer" size="1.5rem" />
           </a>
