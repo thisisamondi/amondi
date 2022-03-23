@@ -6,16 +6,16 @@ const CaseComponent = ({ title, description, artist, category }: any) => {
     <Container>
       <div className="min-h-screen bg-black text-white">
         {/* TITLE */}
-        <h1 className="text-center text-6xl">{title}</h1>
+        <h1 className="text-center lg:text-6xl">{title}</h1>
         {/* DESCRIPTION */}
-        <p className="mb-10 text-center">{description}</p>
+        <p className="mb-8 text-center">{description}</p>
         {/* GRID CONTAINER */}
         <div className="flex justify-center">
           {/* GRID */}
-          <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             {artist.map((artist: any, index: any) => (
               <div key={index}>
-                <div className="relative mb-5 sm:h-[15rem] sm:w-[15rem] md:h-[15rem] md:w-[15rem] lg:h-[23rem] lg:w-[23rem]">
+                <div className="relative mb-5 h-[18rem] w-[18rem] lg:h-[20rem] lg:w-[20rem]">
                   <Image
                     src={artist.image}
                     layout="fill"
