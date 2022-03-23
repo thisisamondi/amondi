@@ -5,12 +5,13 @@ import InfoComponent from '../components/AboutComponent'
 
 export const getStaticProps = async () => {
   const query = groq`*[_type == 'about']{
+    title,
     image {
       ...,
       asset-> {
         _id,
         url,
-        metadata
+        metadata,
       },
     },
 
@@ -27,13 +28,12 @@ export const getStaticProps = async () => {
 }
 
 const About: NextPage = ({ about }: any) => {
-  console.log(about[0].image)
-
   return (
     <div>
       <InfoComponent
         image={about[0].image}
         description={about[0].description}
+        title={about[0].title}
       />
     </div>
   )
