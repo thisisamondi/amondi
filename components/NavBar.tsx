@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <header className="flex items-center justify-between bg-black py-6 text-white">
       <h1 className="ml-10 cursor-pointer text-lg font-normal">
-        <Link href="/">Rebecka Isberg</Link>
+        <Link href="/">Malin Amondi Hansén</Link>
       </h1>
       {/* Primary Menu */}
       <nav className="mr-10">

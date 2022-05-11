@@ -26,7 +26,7 @@ const Home: NextPage = ({ data }: any) => {
   return (
     <div>
       <head>
-        <title>Rebecka Isberg</title>
+        <title>Malin Amondi Hansén</title>
         <link rel="icon" href="" />
         <meta name="description" content="Rebecka Isbergs portfolio where she has case work of her as a keyboard player, music director and musician."></meta>
       </head>
