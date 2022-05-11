@@ -22,7 +22,6 @@ export const getStaticProps = async () => {
 }
 
 const Home: NextPage = ({ data }: any) => {
-  console.log(data.image)
 
   return (
     <div>

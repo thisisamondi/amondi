@@ -24,9 +24,8 @@ export const getStaticProps = async () => {
 }
 
 const Contact: NextPage = ({ contact }: any) => {
-  console.log(contact[0].email)
   const info = contact[0]
-  console.log(contact)
+  
 
   return (
     <div>
