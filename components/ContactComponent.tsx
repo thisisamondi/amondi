@@ -25,9 +25,11 @@ const ContactComponent = ({
           </a>
         </section>
         {/* ICONS */}
-        <section className="mt-16 ">
-          <a href={instagram}>
-            <FaInstagram className="mb-5 inline cursor-pointer" size="1.5rem" />
+        <section className="mt-16">
+          <a href={instagram} className="block">
+           
+            <FaInstagram className="mb-5 inline cursor-pointer" size="1.5rem"/>
+            <span className='ml-3 -mt-3'>Instagram</span>
           </a>
 
           <div className="flex">
