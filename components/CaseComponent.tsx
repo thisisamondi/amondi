@@ -28,8 +28,9 @@ const CaseComponent = ({ title, description, artist, category }: any) => {
                 {console.log(artist.category)}
                 {artist.category &&
                   artist.category.map((category: any, index: any) => (
-                    <span key={index}>
-                      {(index ? ', ' : '') + category.title}
+                    <span key={index} className="md:none contents">
+                      {(index ? ', ' : index[index.length - 1] ? ',' : '') +
+                        category.title}
                     </span>
                   ))}
 
