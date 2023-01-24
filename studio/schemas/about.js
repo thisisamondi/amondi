@@ -11,7 +11,12 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'blockContent',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
     {
       name: 'image',
