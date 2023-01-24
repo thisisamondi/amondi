@@ -19,11 +19,5 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'artist' }] }],
     },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'category' }] }],
-    },
   ],
 }

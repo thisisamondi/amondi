@@ -7,8 +7,12 @@ export const getStaticProps = async () => {
   const query = groq`*[_type == 'work']{
   title,
   description,
-  "artist": artist[]->{name, "image": image.image.asset->url, "country": country[]->{country}},
-  "category": category[]->{title}
+  "artist": artist[]->{ 
+  name, 
+  "image": image.image.asset->url, 
+  "country": country[]->{country},
+  "category": category[]->{title},
+  },
   }
 `
   const work = await sanityClient.fetch(query)

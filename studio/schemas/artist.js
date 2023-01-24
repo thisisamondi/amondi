@@ -21,6 +21,13 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'country' }] }],
     },
+    {
+      name: 'category',
+      title: 'Category',
+      description: 'What was your role(s)?',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'category' }] }],
+    },
   ],
   preview: {
     select: {
