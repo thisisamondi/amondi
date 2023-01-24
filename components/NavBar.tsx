@@ -7,12 +7,12 @@ function NavBar() {
 
   return (
     <header className="flex items-center justify-between bg-black py-6 text-white">
-      <h1 className="ml-10 cursor-pointer text-lg font-normal">
+      <h1 className="ml-10 cursor-pointer text-lg font-normal md:text-2xl">
         <Link href="/">Malin Amondi Hansén</Link>
       </h1>
       {/* Primary Menu */}
       <nav className="mr-10">
-        <ul className="hidden gap-4 font-light lg:flex">
+        <ul className="hidden gap-4 font-light md:text-lg lg:flex">
           <li
             className={
               router.pathname == '/about'

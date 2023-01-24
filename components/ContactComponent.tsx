@@ -26,21 +26,20 @@ const ContactComponent = ({
         </section>
         {/* ICONS */}
         <section className="mt-16">
-          <a href={instagram} className="block">
-           
-            <FaInstagram className="mb-5 inline cursor-pointer" size="1.5rem"/>
-            <span className='ml-3 -mt-3'>Instagram</span>
+          <a href={instagram} className="mb-5 block">
+            <FaInstagram className=" inline cursor-pointer" size="1.7rem" />
+            <span className="ml-3 mt-3 text-xl">malinamondi</span>
           </a>
 
           <div className="flex">
-            <FiMail size="1.5rem" />
-            <p className="ml-3 mr-1">{email}</p>
+            <FiMail size="1.7rem" />
+            <p className="ml-3 mr-1 text-xl">{email}</p>
             <div
               className="cursor-pointer"
               onClick={() => alert('Email copied to clipboard')}
             >
               <CopyToClipboard text={email}>
-                <IoMdCopy size="1rem" />
+                <IoMdCopy size="1.1rem" />
               </CopyToClipboard>
             </div>
           </div>

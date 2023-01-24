@@ -17,7 +17,7 @@ export default function Dropwdown() {
       {({ open }) => (
         <>
           <div>
-            <Menu.Button className="inline-flex w-full justify-center text-lg ">
+            <Menu.Button className="inline-flex w-full justify-center text-2xl md:text-3xl">
               {open ? <AiOutlineClose /> : <AiOutlineMenu />}
             </Menu.Button>
           </div>
@@ -35,7 +35,7 @@ export default function Dropwdown() {
               className="text-l absolute right-0 mt-2 min-h-screen w-32 origin-top-right bg-black focus:outline-none
         "
             >
-              <div className="mr-5 inline-flex flex-col gap-1 py-1 font-normal">
+              <div className="text-l mr-5 inline-flex flex-col gap-1 py-1 font-normal md:text-xl">
                 <Menu.Item>
                   <p>
                     <Link href="/about"> About</Link>
